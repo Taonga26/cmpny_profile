@@ -417,6 +417,10 @@ a {
 
 
 @media(width < 600px) {
+    .hero {
+        background-attachment: fixed;
+    }
+
     .image img {
         max-width: 300px;
     }
