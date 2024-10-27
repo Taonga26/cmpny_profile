@@ -407,6 +407,11 @@ a {
         text-align: center;
     }
 
+    .intro-title,
+    .mission h3 {
+        font-size: 1rem;
+        margin: .3rem 0;
+    }
 
 }
 
@@ -482,11 +487,7 @@ a {
         text-align: center;
     }
 
-    .intro-title,
-    .mission h3 {
-        font-size: 1rem;
-        margin: .3rem 0;
-    }
+
 
     .mission p,
     .card p,
