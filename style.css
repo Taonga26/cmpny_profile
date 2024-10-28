@@ -92,17 +92,18 @@ ol li {
 
 .jobs {
     padding: 1.5rem 0;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
     gap: 2rem;
 }
 
 .service-card {
+    position: relative;
     border-radius: 1rem;
-    padding: 1rem 0 1rem 1rem;
-    max-width: 350px;
+    padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    min-width: 315px;
+    width: 98%;
 }
 
 .service-card h4 {
@@ -375,6 +376,20 @@ a {
     text-decoration: none;
 }
 
+@media(width< 970px) {
+
+    .intro-title,
+    .mission h3 {
+
+        margin: .5rem 0;
+    }
+
+    .hero-title,
+    .conclusion h3 {
+        text-align: center;
+    }
+}
+
 @media (width < 800px) {
     .intro1 {
         flex-direction: column;
@@ -385,6 +400,7 @@ a {
     }
 
     .jobs {
+        display: flex;
         flex-wrap: wrap;
     }
 
@@ -393,6 +409,7 @@ a {
 }
 
 @media (width < 768px) {
+
     .image img {
         max-width: 95vw;
     }
@@ -418,21 +435,22 @@ a {
 
 @media(width < 600px) {
     .hero {
-        background-attachment: fixed;
+        height: 100dvh;
+    }
+
+    .intro-title {
+        font-size: 1.2rem;
     }
 
     .image img {
-        max-width: 300px;
+        width: 98dvw;
     }
 
     .jobs {
-        flex-direction: column;
+        display: grid;
+        grid-auto-flow: row;
     }
 
-    .service-card {
-        margin-right: .2rem;
-
-    }
 
     .values-title,
     .services .title,
@@ -451,7 +469,14 @@ a {
     .conclusion,
     .add-service p,
     ul li {
-        font-size: .9rem;
+        font-size: .85rem;
+    }
+
+    .card h4,
+    .service-card h4,
+    .add-service .title-2,
+    .team-card h4 {
+        font-size: 1rem;
     }
 
     .footer {
@@ -491,8 +516,6 @@ a {
         text-align: center;
     }
 
-
-
     .mission p,
     .card p,
     .services p,
@@ -517,7 +540,8 @@ a {
     .services .title,
     .team-title,
     .service-card2 h4,
-    .add-service h3 {
+    .add-service h3,
+    .intro-title {
         font-size: 1.2rem;
     }
 
@@ -525,7 +549,7 @@ a {
     .service-card h4,
     .add-service .title-2,
     .team-card h4 {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .team-card {
