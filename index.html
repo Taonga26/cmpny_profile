@@ -5,9 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Tier One Advisory & Consultancy Limited provides professional taxation, accounting, business advisory and regulatory compliance services in Zambia.">
+    <meta name="description" content="Tier One Advisory & Consultancy Limited offers accounting, taxation, business advisory and regulatory compliance services in Zambia. Contact our team for professional financial guidance.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tier One Advisory & Consultancy Limited">
+    <meta name="theme-color" content="#10243a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tier One Advisory & Consultancy Limited | Accounting & Tax Advisory">
+    <meta property="og:description" content="Professional accounting, taxation, business advisory and regulatory compliance services in Zambia.">
+    <meta property="og:site_name" content="Tier One Advisory & Consultancy Limited">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tier One Advisory & Consultancy Limited">
+    <meta name="twitter:description" content="Accounting, taxation and business advisory services in Zambia.">
 
-    <title>Tier One Advisory & Consultancy Limited</title>
+    <title>Accounting, Tax & Business Advisory in Zambia | Tier One</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +26,18 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "Tier One Advisory & Consultancy Limited",
+      "email": "tieroneadvisory.consultancy@outlook.com",
+      "telephone": ["+260974642933", "+260973112198"],
+      "areaServed": {"@type": "Country", "name": "Zambia"},
+      "description": "Accounting, taxation, business advisory and regulatory compliance services in Zambia.",
+      "knowsAbout": ["Accounting", "Taxation", "Business Advisory", "Financial Reporting", "Regulatory Compliance"]
+    }
+    </script>
     <script src="https://kit.fontawesome.com/48a79765af.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,7 +45,7 @@
 
     <!-- NAVIGATION -->
     <header class="header">
-        <nav class="navbar container">
+        <nav class="navbar container" aria-label="Main navigation">
 
             <a href="#" class="brand">
                 <span class="brand-icon">T1</span>
@@ -35,7 +57,7 @@
 
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
-            <label for="menu-toggle" class="menu-button" aria-label="Toggle navigation">
+            <label for="menu-toggle" class="menu-button" role="button" tabindex="0" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </label>
 
@@ -108,7 +130,7 @@
                 <div class="about-grid">
 
                     <div class="about-image">
-                        <img src="./img/banner.jpg" alt="Tier One business consultancy">
+                        <img src="./img/banner.jpg" alt="Tier One Advisory and Consultancy business services" loading="lazy" decoding="async">
                         <div class="image-caption">
                             <strong>Professionalism.</strong>
                             <span>Precision. Partnership.</span>
@@ -480,10 +502,6 @@
 
                     <article class="team-card">
 
-                        <div class="team-image">
-                            <img src="./img/profile1.jpg" alt="Frazer Sekeleti">
-                        </div>
-
                         <div class="team-info">
                             <span class="team-role">FINANCIAL & TAX ADVISORY</span>
                             <h3>Frazer Sekeleti</h3>
@@ -498,10 +516,6 @@
 
 
                     <article class="team-card">
-
-                        <div class="team-image">
-                            <img src="./img/profile2.jpg" alt="Kauta Pearson Ngulube">
-                        </div>
 
                         <div class="team-info">
                             <span class="team-role">ACCOUNTING & FINANCE</span>
@@ -616,7 +630,7 @@
                     </p>
                 </div>
 
-                <a href="mailto:fsekeleti.tierone@outlook.com"
+                <a href="mailto:tieroneadvisory.consultancy@outlook.com"
                    class="btn btn-dark">
                     Contact Our Team
                     <i class="fa-solid fa-arrow-right"></i>
@@ -676,7 +690,7 @@
                         +260 974 642 933
                     </a>
 
-                    <a href="mailto:fsekeleti.tierone@outlook.com">
+                    <a href="mailto:tieroneadvisory.consultancy@outlook.com">
                         <i class="fa-regular fa-envelope"></i>
                         fsekeleti.tierone@outlook.com
                     </a>
@@ -710,8 +724,17 @@
     </footer>
 
     <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const menuToggle = document.getElementById("menu-toggle");
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menuToggle.checked = false;
+            });
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") menuToggle.checked = false;
+        });
     </script>
 
 </body>
