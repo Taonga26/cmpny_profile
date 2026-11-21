@@ -1087,3 +1087,39 @@ label:focus-visible {
         animation-duration: .01ms !important;
     }
 }
+
+
+/* =========================================
+   RESPONSIVE & CONTENT REFINEMENTS
+========================================= */
+.team-card { height: 100%; }
+.team-info { height: 100%; }
+.team-grid { align-items: stretch; }
+.footer-column a { overflow-wrap: anywhere; }
+.nav-links a:focus-visible,
+.menu-button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+@media (max-width: 950px) {
+    .navbar { gap: 16px; }
+    .nav-links { gap: 16px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+    .nav-links {
+        max-height: calc(100vh - 72px);
+        overflow-y: auto;
+    }
+    .team-grid { grid-template-columns: 1fr; }
+    .team-card { max-width: 520px; width: 100%; margin-inline: auto; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-brand { grid-column: auto; }
+}
+@media (max-width: 380px) {
+    .brand-name { font-size: .88rem; }
+    .brand-name small { font-size: .46rem; letter-spacing: .7px; }
+    .brand-icon { width: 40px; height: 40px; }
+    .hero h1 { font-size: clamp(2.1rem, 10vw, 2.6rem); }
+    .section-padding { padding: 58px 0; }
+}
